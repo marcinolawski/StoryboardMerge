@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ACEView" "${PODS_ROOT}/Headers/DMTabBar"
+OTHER_CFLAGS = $(inherited) "-isystem${PODS_ROOT}/Headers" "-isystem${PODS_ROOT}/Headers/ACEView" "-isystem${PODS_ROOT}/Headers/DMTabBar"
+OTHER_LDFLAGS = -ObjC -framework WebKit
+PODS_ROOT = ${SRCROOT}/Pods

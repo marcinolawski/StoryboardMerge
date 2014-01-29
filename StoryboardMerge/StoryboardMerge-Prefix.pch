@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'StoryboardMerge' target in the 'StoryboardMerge' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

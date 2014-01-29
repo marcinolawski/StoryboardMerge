@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css" media="screen">
+            body, html {
+                padding: 0;
+                margin: 0;
+            }
+            #editor {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="editor"></div>
+        <script src="___ACE_VIEW_JAVASCRIPT_DIRECTORY___/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.commands.addCommands([{
+                name: "ACEFind",
+                bindKey: {
+                    win: "Ctrl-F",
+                    mac: "Command-F"
+                },
+                exec: function(editor, line) {
+                    ACEView.showFindInterface();
+                    return false;
+                },
+                readOnly: true
+            }]);
+            editor.commands.addCommands([{
+                name: "ACEReplace",
+                bindKey: {
+                    win: "Ctrl-Shift-F",
+                    mac: "Command-Shift-F"
+                },
+                exec: function(editor, line) {
+                    ACEView.showReplaceInterface();
+                    return false;
+                },
+                readOnly: true
+            }]);
+            var reportChanges = true;
+            editor.on('change', function(delta) {
+                if (reportChanges) {
+                    ACEView.aceTextDidChange();
+                }
+            });
+            var Range = require('ace/range').Range;
+        </script>
+    </body>
+</html>
