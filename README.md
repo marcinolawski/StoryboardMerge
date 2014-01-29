@@ -1,6 +1,8 @@
 StoryboardMerge
 ===============
 
+![alt tag](http://marcinolawski.pl/Tools_files/Screenshot2.jpg)
+
 Storyboard diff and merge tool which:
 - compares and merges two storyboard files,
 - provides an automatic merge-facility,
