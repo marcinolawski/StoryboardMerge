@@ -22,6 +22,11 @@ The StoryboardMerge will validate a new storyboard and mark in red incorrect ele
 
 Click Save to write a new storyboard or override the old one.
 
+Building
+========
+
+**IMPORTANT**: StoryboardMerge uses CocoaPods so make sure to always open the workspace file (StoryboardMerge.xcworkspace) instead of the project file (StoryboardMerge.xcodeproj) when building.
+
 More info
 =========
 
