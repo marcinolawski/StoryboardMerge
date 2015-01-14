@@ -20,7 +20,7 @@
 }
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (strong,nonatomic) NSURL *saveURL;
 
 - (IBAction)openButtonPressed:(id)sender;
 - (IBAction)revisionControlPressed:(id)sender;

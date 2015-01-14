@@ -54,8 +54,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    
-    
     _window.delegate = self;
     isClosed = YES;
     [_window registerForDraggedTypes:@[NSFilenamesPboardType]];
@@ -105,17 +103,45 @@
 - (void)windowDidBecomeMain:(NSNotification *)notification{
     [NSApp setMenu:_window.menu];
     if (isClosed){
-        _path0TextField.stringValue = @"";
-        _path1TextField.stringValue = @"";
-        #ifdef DEBUG
-        NSString *path = [@"~/Dropbox/Storyboard/MobStoryTest1/MobStoryTest1/en.lproj/MainStoryboard2.storyboard" stringByExpandingTildeInPath];
-        _path0TextField.stringValue = path;
-        path = [@"~/Dropbox/Storyboard/MobStoryTest1/MobStoryTest1/MainStoryboard3.storyboard" stringByExpandingTildeInPath];
-        _path1TextField.stringValue = path;
-        [self _revisionControlCheck];
-        #endif
+        NSArray *args = [[NSProcessInfo processInfo] arguments];
+        
+#ifdef DEBUG
+        NSUInteger argCount = 7; // Xcode passes debug arguments into the app at the end of the arguments passed through the current Scheme.
+#else
+        NSUInteger argCount = 5;
+#endif
+        if ([args count] == argCount) {
+            NSString *leftPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[2]];
+            NSString *rightPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[3]];
+            NSString *destinationPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[4]];
+            
+            self.saveURL = [NSURL fileURLWithPath:destinationPath];
+            
+            _path0TextField.stringValue = leftPath;
+            _path1TextField.stringValue = rightPath;
+        } else {
+            _path0TextField.stringValue = @"";
+            _path1TextField.stringValue = @"";
+        }
     }
     isClosed = NO;
+}
+
+- (NSString *)resolvedPathFromWorkingDirectory:(NSString *)workingDirectory forFile:(NSString *)filePath
+{
+    NSString *returnedPath;
+    if ([filePath hasPrefix:@"."]) {
+        
+        returnedPath = [NSString stringWithFormat:@"%@%@",workingDirectory,[filePath substringFromIndex:1]];
+        
+    } else if(![filePath hasPrefix:@"/"]) {
+        
+        returnedPath = [NSString stringWithFormat:@"%@/%@",workingDirectory,filePath];
+        
+    } else {
+        returnedPath = filePath;
+    }
+    return returnedPath;
 }
 
 - (void)windowWillClose:(NSNotification *)notification{

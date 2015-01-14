@@ -10,6 +10,7 @@
 #import "MOTools.h"
 #import "MOXStoryboard.h"
 #import "MOXElement.h"
+#import "AppDelegate.h"
 
 @interface DocumentsWinCtrl ()
 
@@ -121,15 +122,36 @@
 }
 
 - (IBAction)saveAction:(id)sender {
-    NSSavePanel* saveDlg = [NSSavePanel savePanel];
-    saveDlg.allowedFileTypes = @[@"storyboard"];
-    saveDlg.directoryURL = [_storyboards[1] url];
-    if ( [saveDlg runModal] == NSOKButton ){
-        NSLog(@"%@",[saveDlg URL]);
-        NSData *data = [_storyboards[1] XMLData];
-        NSError *error; BOOL r;
-        r = [data writeToURL:[saveDlg URL] options:NSDataWritingAtomic error:&error];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[NSApplication sharedApplication] delegate];
+    if (appDelegate.saveURL)
+    {
+        [self saveFileURL:appDelegate.saveURL];
+    } else {
+        NSSavePanel* saveDlg = [NSSavePanel savePanel];
+        saveDlg.allowedFileTypes = @[@"storyboard"];
+        saveDlg.directoryURL = [_storyboards[1] url];
+        if ( [saveDlg runModal] == NSOKButton ){
+            [self saveFileURL:[saveDlg URL]];
+        }
+    }
+    
+}
+
+- (void)saveFileURL:(NSURL *)url
+{
+    NSLog(@"%@",url);
+    NSData *data = [_storyboards[1] XMLData];
+    NSError *error;
+    BOOL r;
+    r = [data writeToURL:url options:NSDataWritingAtomic error:&error];
+    if (error) {
         MOIfErrorShowAlertSheetAndReturn(r,error,self.window,)
+    } else {
+        AppDelegate *appDelegate = (AppDelegate *)[[NSApplication sharedApplication] delegate];
+        if (appDelegate.saveURL) {
+            MOShowCriticalAlert(self.window, @"Success", @"Merged file successfully saved.\nYou may now quit StoryboardMerge and mark the merge as successful. Although you MIGHT want to open the storyboard file in Xcode and let it settle and check it first.");
+        }
     }
 }
 
