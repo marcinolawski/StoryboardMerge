@@ -33,7 +33,7 @@ Edit your `~/.gitconfig` file and add the following section:
 	trustExitCode = false
 ```
 
-Copy [storyboard-merge](http://github.com/) into `/usr/local/bin` and make it executable:
+Copy [storyboard-merge](https://github.com/edelabar/StoryboardMerge/blob/master/storyboard-merge) into `/usr/local/bin` and make it executable:
 
 ```bash
 $ chmod 755 /usr/local/bin/storyboard-merge
