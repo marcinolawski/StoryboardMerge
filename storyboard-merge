@@ -1,0 +1,2 @@
+#!/bin/sh
+open /Applications/StoryboardMerge.app/ --args ${PWD} $2 $3 $4

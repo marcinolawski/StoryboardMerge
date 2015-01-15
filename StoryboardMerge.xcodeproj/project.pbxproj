@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		910AD2729A2842C0A6953446 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F18A7E1824E008211556F /* libPods.a */; };
+		B883A20F1A66D7A500F7796B /* branch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B883A20C1A66D7A500F7796B /* branch.storyboard */; };
+		B883A2101A66D7A500F7796B /* common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B883A20D1A66D7A500F7796B /* common.storyboard */; };
+		B883A2111A66D7A500F7796B /* current.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B883A20E1A66D7A500F7796B /* current.storyboard */; };
 		D319A4F6189817880056720C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D319A4F5189817880056720C /* LICENSE */; };
 		D319A5FE18981D9E0056720C /* ace.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A55618981D110056720C /* ace.js */; };
 		D319A5FF18981D9E0056720C /* ext-static_highlight.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A55718981D110056720C /* ext-static_highlight.js */; };
@@ -131,7 +134,7 @@
 		D3D69E0618980972006E53FC /* NSError+MO.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D69E0118980972006E53FC /* NSError+MO.m */; };
 		D3D69E0A189809B6006E53FC /* Blueprint.icns in Resources */ = {isa = PBXBuildFile; fileRef = D3D69E09189809B6006E53FC /* Blueprint.icns */; };
 		D3D69E1118980E5F006E53FC /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D69E1018980E5F006E53FC /* CrashReporter.framework */; };
-		D3D69E1218980E63006E53FC /* CrashReporter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D69E1018980E5F006E53FC /* CrashReporter.framework */; };
+		D3D69E1218980E63006E53FC /* CrashReporter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D69E1018980E5F006E53FC /* CrashReporter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D3D69E1418980FFE006E53FC /* class.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D69DCB18980885006E53FC /* class.png */; };
 		D3D69E1518980FFE006E53FC /* classes.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D69DCC18980885006E53FC /* classes.png */; };
 		D3D69E1618980FFE006E53FC /* color.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3D69DCD18980885006E53FC /* color.png */; };
@@ -286,6 +289,9 @@
 
 /* Begin PBXFileReference section */
 		6FE614DEBD08409DB02F9DE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B883A20C1A66D7A500F7796B /* branch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = branch.storyboard; sourceTree = "<group>"; };
+		B883A20D1A66D7A500F7796B /* common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = common.storyboard; sourceTree = "<group>"; };
+		B883A20E1A66D7A500F7796B /* current.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = current.storyboard; sourceTree = "<group>"; };
 		D319A4F5189817880056720C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D319A55618981D110056720C /* ace.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ace.js; sourceTree = "<group>"; };
 		D319A55718981D110056720C /* ext-static_highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "ext-static_highlight.js"; sourceTree = "<group>"; };
@@ -453,6 +459,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B883A20A1A66D7A500F7796B /* TestFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B883A20B1A66D7A500F7796B /* 000-AddViewController */,
+			);
+			path = TestFiles;
+			sourceTree = "<group>";
+		};
+		B883A20B1A66D7A500F7796B /* 000-AddViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B883A20C1A66D7A500F7796B /* branch.storyboard */,
+				B883A20D1A66D7A500F7796B /* common.storyboard */,
+				B883A20E1A66D7A500F7796B /* current.storyboard */,
+			);
+			path = "000-AddViewController";
+			sourceTree = "<group>";
+		};
 		D319A55418981CFC0056720C /* ACEViewHTML */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +699,7 @@
 				D3E672C41897FE79002EC818 /* StoryboardMerge */,
 				D3E672BD1897FE79002EC818 /* Frameworks */,
 				D3E672BC1897FE79002EC818 /* Products */,
+				B883A20A1A66D7A500F7796B /* TestFiles */,
 				6FE614DEBD08409DB02F9DE5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -763,7 +788,7 @@
 		D3E672B31897FE79002EC818 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Marcin Olawski";
 			};
 			buildConfigurationList = D3E672B61897FE79002EC818 /* Build configuration list for PBXProject "StoryboardMerge" */;
@@ -793,11 +818,13 @@
 				D3E672D51897FE7A002EC818 /* MainMenu.xib in Resources */,
 				D3D69DD918980885006E53FC /* class.png in Resources */,
 				D3D69DDA18980885006E53FC /* classes.png in Resources */,
+				B883A2101A66D7A500F7796B /* common.storyboard in Resources */,
 				D3D69DDB18980885006E53FC /* color.png in Resources */,
 				D3D69DDC18980885006E53FC /* constraint.png in Resources */,
 				D3D69DDD18980885006E53FC /* constraints.png in Resources */,
 				D3D69DDE18980885006E53FC /* dependencies.png in Resources */,
 				D3D69DDF18980885006E53FC /* document.png in Resources */,
+				B883A20F1A66D7A500F7796B /* branch.storyboard in Resources */,
 				D3D69DE018980885006E53FC /* objects.png in Resources */,
 				D3D69DE118980885006E53FC /* plugin.png in Resources */,
 				D3D69DE218980885006E53FC /* point.png in Resources */,
@@ -814,6 +841,7 @@
 				D3D69DF618980906006E53FC /* MergeStoryboardView.xib in Resources */,
 				D3D69E0A189809B6006E53FC /* Blueprint.icns in Resources */,
 				D319A4F6189817880056720C /* LICENSE in Resources */,
+				B883A2111A66D7A500F7796B /* current.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,7 +938,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -943,7 +970,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;

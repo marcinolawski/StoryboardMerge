@@ -52,7 +52,7 @@ NSString* NSStringFromDiff(MOXDiff diff){
         MOXElement *scene = (MOXElement*)self.parent.parent;
         MOXElement *scenes = (MOXElement*)scene.parent;
         NSUInteger idx = [scenes.children indexOfObject:scene];
-        if (idx>0 && [scenes.children[idx-1] kind]==NSXMLCommentKind)
+        if (idx>0 && [((NSXMLNode *)scenes.children[idx-1]) kind]==NSXMLCommentKind)
             return [scenes.children[idx-1] stringValue];
     }
     
