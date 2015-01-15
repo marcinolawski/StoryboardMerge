@@ -1,3 +1,5 @@
+inhibit_all_warnings!
+
 platform :osx
 
 pod 'ACEView', '~> 0.0.4'
