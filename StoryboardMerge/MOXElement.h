@@ -55,6 +55,7 @@ NSString* NSStringFromDiff(MOXDiff diff);
 - (MOXElement*)findCousin:(MOXElement*)uncle;
 - (void)findCousinAndCompare:(MOXElement*)uncle;
 - (BOOL)hasAttribute:(NSString*)attributeName withValue:(NSString*)value;
+- (void)clearDiff;
 
 
 #pragma mark - Storyboards Children
@@ -79,13 +80,11 @@ NSString* NSStringFromDiff(MOXDiff diff);
 
 #pragma mark - Propertys
 
-- (MOXElement*)parent;
-- (void)clearDiff;
-
 @property (nonatomic,readonly) NSArray* storyboardChildren;
 @property (nonatomic) MOXDiff diff;
 @property (nonatomic) MOXMergeAction actionMask;
 @property (nonatomic,readonly) NSMutableArray *warnings;
 @property (nonatomic,readonly) NSImage *icon;
+@property (readonly, copy) MOXElement *parent;
 
 @end
