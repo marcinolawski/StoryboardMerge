@@ -104,13 +104,9 @@
     [NSApp setMenu:_window.menu];
     if (isClosed){
         NSArray *args = [[NSProcessInfo processInfo] arguments];
-        
-#ifdef DEBUG
-        NSUInteger argCount = 7; // Xcode passes debug arguments into the app at the end of the arguments passed through the current Scheme.
-#else
-        NSUInteger argCount = 5;
-#endif
-        if ([args count] == argCount) {
+      
+        //Be aware that when debugging Xcode will add 2 extra arguments into the app at the end of the arguments passed through the current Scheme.
+        if ([args count] >= 5) {
             NSString *leftPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[2]];
             NSString *rightPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[3]];
             NSString *destinationPath = [self resolvedPathFromWorkingDirectory:args[1] forFile:args[4]];
@@ -162,18 +158,10 @@
     NSError *error;
     MOXStoryboard *story0 = [[MOXStoryboard alloc] initWithContentsOfFile:_path0TextField.stringValue error:&error];
     MOIfErrorShowAlertSheetAndReturn(story0,error,_window,);
-    NSString *address = _path1TextField.stringValue;
     MOXStoryboard *story1;
-    if ([address hasPrefix:@"svn:"] || [address hasPrefix:@"git:"]){
-        NSData *data  = [_revisionCtrl catFile:address error:&error];
-        MOIfErrorShowAlertSheetAndReturn(data,error,_window,);
-        story1 = [[MOXStoryboard alloc] initWithData:data options:0 error:&error];
-        MOIfErrorShowAlertSheetAndReturn(data,error,_window,);
-        story1.url = [NSURL URLWithString:address];
-    }else{
-        story1 = [[MOXStoryboard alloc] initWithContentsOfFile:_path1TextField.stringValue error:&error];
-        MOIfErrorShowAlertSheetAndReturn(story1,error,_window,);
-    }
+    story1 = [[MOXStoryboard alloc] initWithContentsOfFile:_path1TextField.stringValue error:&error];
+    MOIfErrorShowAlertSheetAndReturn(story1,error,_window,);
+  
     
     NSWindowController *ctrl = [[DocumentsWinCtrl alloc]initWithStorybords:@[story0,story1]];
     

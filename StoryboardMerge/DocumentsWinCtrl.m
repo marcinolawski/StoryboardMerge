@@ -44,7 +44,7 @@
 }
 
 - (void)awakeFromNib{
-    if (!nibLoaded){ //<- bo MergeStoryboardView tez wola awakeFromNib
+    if (!nibLoaded){ //<- because MergeStoryboardView also call awakeFromNib
         nibLoaded = YES;
         _storyViews = @[[MergeStoryboardView viewWithOwner:self],[MergeStoryboardView viewWithOwner:self]];
         

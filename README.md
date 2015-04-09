@@ -6,7 +6,6 @@ StoryboardMerge
 Storyboard diff and merge tool which:
 - compares and merges two storyboard files,
 - provides an automatic merge-facility,
-- supports SVN and Git.
 
 The storyboarding is a new UI design feature introduced with the Xcode 4.2 which allows to describe all the application’s UI in one file. This very handy mechanism has one major drawback. Because all the UI lives in one file, the whole UI design process is very prone to revision control conflicts. Moreover, the Xcode standard merging mechanism treats storyboard files like ordinary text files which further complicates merging.  The StoryboardMerge solves those problems.
 
@@ -33,7 +32,7 @@ Edit your `~/.gitconfig` file and add the following section:
 	trustExitCode = false
 ```
 
-Copy [storyboard-merge](https://github.com/edelabar/StoryboardMerge/blob/master/storyboard-merge) into `/usr/local/bin` and make it executable:
+Copy [storyboard-merge](https://github.com/marcinolawski/StoryboardMerge/blob/master/storyboard-merge) into `/usr/local/bin` and make it executable:
 
 ```bash
 $ chmod 755 /usr/local/bin/storyboard-merge

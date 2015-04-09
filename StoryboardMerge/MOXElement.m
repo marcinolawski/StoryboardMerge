@@ -11,10 +11,10 @@
 #import "NSXMLNode+MOX.h"
 #import "MOTools.h"
 
-#define elementsIconsDict MOXElement_elementsIconsDict
+
 #define ICONS_DIR @"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/PrivatePlugIns/IDEInterfaceBuilderCocoaTouchIntegration.ideplugin/Contents/Resources/"
 
-NSMutableDictionary* elementsIconsDict = nil;
+static NSMutableDictionary* elementsIconsDict = nil;
 
 
 NSString* NSStringFromDiff(MOXDiff diff){
@@ -72,7 +72,11 @@ NSString* NSStringFromDiff(MOXDiff diff){
             return [NSString stringWithFormat:@"%@ - %@",PrettyName(key), path];
         }
     }
-    
+  
+    if ([self.name isEqualToString:@"string"]){
+        return [self.children[0] description];
+    }
+  
     attribute = [self attributeForName:@"userLabel"];
     if (attribute)
         return attribute.stringValue;
@@ -111,15 +115,21 @@ NSString* NSStringFromDiff(MOXDiff diff){
 - (NSUInteger)storyboardChildCount{
     if ([self.name isEqualToString:@"scenes"])
         return [[self nodesForXPath:(NSString *)@"*" error:nil] count];
-    else
-        return self.childCount;
+  
+    if ([self.name isEqualToString:@"string"])
+        return 0;
+    
+    return self.childCount;
 }
 
 - (NSArray*)storyboardChildren{
     if ([self.name isEqualToString:@"scenes"])
         return [self nodesForXPath:(NSString *)@"*" error:nil];
-    else
-        return self.children;
+  
+    if ([self.name isEqualToString:@"string"])
+      return nil;
+  
+    return self.children;
 }
 
 - (NSXMLNode *)storyboardChildAtIndex:(NSUInteger)index{
@@ -213,8 +223,8 @@ NSString* NSStringFromDiff(MOXDiff diff){
         idAtrr = [[self attributeForName:@"sceneID"] stringValue];
         return [NSString stringWithFormat:@"scene[@sceneID='%@']",idAtrr];
     }
-    
-
+  
+  
     if ( [self _haveName:@"class" andAtributesNames:@[@"className"]] )
         return [self _xpathFromNameAndAttributesForNames:@[@"className"]];
 
@@ -223,7 +233,19 @@ NSString* NSStringFromDiff(MOXDiff diff){
     
     if ([self _haveName:@"plugIn" andAtributesNames:@[@"identifier"]])
         return [self _xpathFromNameAndAttributesForNames:@[@"identifier"]];
-    
+  
+    if ([self _haveName:@"userDefinedRuntimeAttribute" andAtributesNames:@[@"keyPath"]])
+        return [self _xpathFromNameAndAttributesForNames:@[@"keyPath"]];
+  
+    if ([self _haveName:@"exclude" andAtributesNames:@[@"reference"]])
+        return [self _xpathFromNameAndAttributesForNames:@[@"reference"]];
+  
+    if ([self _haveName:@"segment" andAtributesNames:@[@"title"]])
+       return [self _xpathFromNameAndAttributesForNames:@[@"title"]];
+  
+    if ([self _haveName:@"image" andAtributesNames:@[@"name"]])
+      return [self _xpathFromNameAndAttributesForNames:@[@"name"]];
+  
     idAtrr = [[self attributeForName:@"key"] stringValue];
     if (idAtrr)
         return [NSString stringWithFormat:@"%@[@key='%@']",self.name,idAtrr];
@@ -280,18 +302,32 @@ NSString* NSStringFromDiff(MOXDiff diff){
         return;
     }
     
-    if (![self areAttributesEqual:cousin])
+    if (![self areAttributesEqual:cousin]){
         self.diff=MOXDiffNodesUnequal;
-        
-        if (self.childCount==0){
-            //porownaj atrybuty!!
-            return;
-        }
-    
+        //TO DO: show atributrs differencies
+    }
+  
+    if (self.childCount==0){
+        return;
+    }
+  
+    if ([@"mutableArray" isEqualToString:self.name]){
+        [self compareArrays:cousin];
+        return;
+    }
+  
     for (MOXElement* child in [self nodesForXPath:@"*" error:nil]){
         MOXElement* childsUncle = cousin;
         [child findCousinAndCompare:childsUncle];
     }
+}
+
+- (void)compareArrays:(MOXElement*)arrayElement
+{
+  //TO DO: do this better
+  BOOL arrayEquals = [[self XMLString] isEqualToString:[arrayElement XMLString]];
+  if ( !arrayEquals )
+    self.diff=MOXDiffNodesUnequal;
 }
 
 - (BOOL)hasAttribute:(NSString*)attributeName withValue:(NSString*)value{
@@ -396,16 +432,19 @@ NSString* NSStringFromDiff(MOXDiff diff){
 
 + (void)_initIconsDict{
     NSMutableDictionary *dict = [NSMutableDictionary new];
-    //!!blad jesli katalog nie istnieje
+    //TO DO: Error if ICONS_DIR don't exist
     NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:ICONS_DIR];
     NSString *file;
     NSString *name;
     NSImage *img;
     while (file = [dirEnum nextObject]) {
-        if ([file hasSuffix:@"Icon.tiff"] || [file hasSuffix:@"Icon.pdf"] || [file hasSuffix:@"Icon.png"]){
-            //zrob z UIViewControllerIcon.tiff viewController
-            name = [file substringFromIndex:2];//wywal prefix
-            name = [name substringToIndex:[name rangeOfString:@"Icon."].location];//wywal koncowke
+        if ([file hasSuffix:@".tiff"] || [file hasSuffix:@".pdf"] || [file hasSuffix:@".png"]){
+            //prepare name e.g.: UIViewControllerIcon.tiff -> viewController
+            name = [file substringFromIndex:2];//remove prefix
+            if ([name containsString:@"Icon."]) //remove end
+              name = [name substringToIndex:[name rangeOfString:@"Icon."].location];
+            else
+              name = [name substringToIndex:[name rangeOfString:@"."].location];
             name = [name lowercaseString];
             file = [NSString pathWithComponents:@[ICONS_DIR,file]];
             img = [[NSImage alloc] initByReferencingFile:file];

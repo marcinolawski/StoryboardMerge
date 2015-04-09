@@ -1,2 +1,2 @@
 #!/bin/sh
-open /Applications/StoryboardMerge.app/ --args ${PWD} $2 $3 $4
+open -W -n /Applications/StoryboardMerge.app/ --args ${PWD} $2 $3 $4
