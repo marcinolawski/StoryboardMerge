@@ -224,7 +224,11 @@ NSString* NSStringFromDiff(MOXDiff diff){
         return [NSString stringWithFormat:@"scene[@sceneID='%@']",idAtrr];
     }
   
-  
+    if ([self.name isEqualToString:@"capability"]){
+        idAtrr = [[self attributeForName:@"name"] stringValue];
+        return [NSString stringWithFormat:@"capability[@name='%@']",idAtrr];
+    }
+    
     if ( [self _haveName:@"class" andAtributesNames:@[@"className"]] )
         return [self _xpathFromNameAndAttributesForNames:@[@"className"]];
 
