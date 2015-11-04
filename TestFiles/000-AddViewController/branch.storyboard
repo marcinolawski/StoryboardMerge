@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upl-LU-lon">
-                                <rect key="frame" x="253" y="128" width="331" height="344"/>
+                                <rect key="frame" x="257" y="128" width="323" height="161.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-mh-WAs">
-                                        <rect key="frame" x="142" y="157" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-mh-WAs">
+                                        <rect key="frame" x="138.5" y="66" width="46" height="30"/>
+                                        <animations/>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -30,14 +32,20 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.092830394329999996" green="1" blue="0.20990909169999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6sL-mh-WAs" firstAttribute="centerY" secondItem="Upl-LU-lon" secondAttribute="centerY" id="Am9-Vv-mjl"/>
+                                    <constraint firstAttribute="width" secondItem="Upl-LU-lon" secondAttribute="height" multiplier="2:1" id="RBI-rr-nsX"/>
+                                    <constraint firstItem="6sL-mh-WAs" firstAttribute="centerX" secondItem="Upl-LU-lon" secondAttribute="centerX" id="jR0-Tv-dN1"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Upl-LU-lon" firstAttribute="leading" secondItem="RlB-Q8-lTB" secondAttribute="leadingMargin" constant="237" id="AsZ-u6-Lhu"/>
                             <constraint firstItem="Upl-LU-lon" firstAttribute="trailing" secondItem="RlB-Q8-lTB" secondAttribute="trailingMargin" id="Xir-9f-3Uf"/>
-                            <constraint firstItem="fsc-G1-yaR" firstAttribute="top" secondItem="Upl-LU-lon" secondAttribute="bottom" constant="128" id="jMx-tK-BgG"/>
                             <constraint firstItem="Upl-LU-lon" firstAttribute="top" secondItem="OTH-Nm-fLg" secondAttribute="bottom" constant="108" id="pP7-Xc-Xhg"/>
                         </constraints>
                     </view>
@@ -57,6 +65,7 @@
                     <view key="view" contentMode="scaleToFill" id="Dqg-ZN-0HT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -75,6 +84,7 @@
                     <view key="view" contentMode="scaleToFill" id="yUQ-DQ-l74">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
