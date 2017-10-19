@@ -7,7 +7,7 @@ target 'StoryboardMerge' do
 
   # Pods for StoryboardMerge
 
-  pod 'ACEView', '~> 0.0.4'
-  pod 'DMTabBar', '~> 0.0.1'
+  pod 'ACEView', '0.0.4'
+  pod 'DMTabBar', '0.0.1'
 
 end
