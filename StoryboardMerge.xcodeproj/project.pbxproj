@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		910AD2729A2842C0A6953446 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F18A7E1824E008211556F /* libPods.a */; };
+		593A78144F8E8EDB4ABA13B0 /* libPods-StoryboardMerge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3716F494D544D53EEAC796A3 /* libPods-StoryboardMerge.a */; };
 		D319A4F6189817880056720C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D319A4F5189817880056720C /* LICENSE */; };
 		D319A5FE18981D9E0056720C /* ace.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A55618981D110056720C /* ace.js */; };
 		D319A5FF18981D9E0056720C /* ext-static_highlight.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A55718981D110056720C /* ext-static_highlight.js */; };
@@ -71,7 +71,6 @@
 		D319A63918981D9F0056720C /* theme-eclipse.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59118981D120056720C /* theme-eclipse.js */; };
 		D319A63A18981D9F0056720C /* theme-github.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59218981D120056720C /* theme-github.js */; };
 		D319A63B18981D9F0056720C /* theme-idle_fingers.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59318981D120056720C /* theme-idle_fingers.js */; };
-		D319A63C18981D9F0056720C /* theme-kr.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59418981D120056720C /* theme-kr.js */; };
 		D319A63D18981D9F0056720C /* theme-merbivore.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59518981D120056720C /* theme-merbivore.js */; };
 		D319A63E18981D9F0056720C /* theme-merbivore_soft.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59618981D120056720C /* theme-merbivore_soft.js */; };
 		D319A63F18981D9F0056720C /* theme-mono_industrial.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = D319A59718981D120056720C /* theme-mono_industrial.js */; };
@@ -224,7 +223,6 @@
 				D319A63918981D9F0056720C /* theme-eclipse.js in CopyFiles */,
 				D319A63A18981D9F0056720C /* theme-github.js in CopyFiles */,
 				D319A63B18981D9F0056720C /* theme-idle_fingers.js in CopyFiles */,
-				D319A63C18981D9F0056720C /* theme-kr.js in CopyFiles */,
 				D319A63D18981D9F0056720C /* theme-merbivore.js in CopyFiles */,
 				D319A63E18981D9F0056720C /* theme-merbivore_soft.js in CopyFiles */,
 				D319A63F18981D9F0056720C /* theme-mono_industrial.js in CopyFiles */,
@@ -285,8 +283,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1AC5DDE86F57E53FB7DE3BBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		65DD8423CD48DB3AF1BD6081 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		15280880760A12CB62B7E0F4 /* Pods-StoryboardMerge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMerge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoryboardMerge/Pods-StoryboardMerge.release.xcconfig"; sourceTree = "<group>"; };
+		3361D6341B68AB583F2BE93E /* Pods-StoryboardMerge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMerge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryboardMerge/Pods-StoryboardMerge.debug.xcconfig"; sourceTree = "<group>"; };
+		3716F494D544D53EEAC796A3 /* libPods-StoryboardMerge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StoryboardMerge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D319A4F5189817880056720C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D319A55618981D110056720C /* ace.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ace.js; sourceTree = "<group>"; };
 		D319A55718981D110056720C /* ext-static_highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "ext-static_highlight.js"; sourceTree = "<group>"; };
@@ -437,7 +436,6 @@
 		D3E672D01897FE7A002EC818 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3E672D11897FE7A002EC818 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D3E672D41897FE7A002EC818 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		FE0F18A7E1824E008211556F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,19 +444,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E672BF1897FE79002EC818 /* Cocoa.framework in Frameworks */,
-				910AD2729A2842C0A6953446 /* libPods.a in Frameworks */,
 				D3D69E1118980E5F006E53FC /* CrashReporter.framework in Frameworks */,
+				593A78144F8E8EDB4ABA13B0 /* libPods-StoryboardMerge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38086B998CA400ED756A128B /* Pods */ = {
+		5ED8964E6A07337D007E25F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65DD8423CD48DB3AF1BD6081 /* Pods.debug.xcconfig */,
-				1AC5DDE86F57E53FB7DE3BBF /* Pods.release.xcconfig */,
+				3361D6341B68AB583F2BE93E /* Pods-StoryboardMerge.debug.xcconfig */,
+				15280880760A12CB62B7E0F4 /* Pods-StoryboardMerge.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -685,7 +683,7 @@
 				D3E672C41897FE79002EC818 /* StoryboardMerge */,
 				D3E672BD1897FE79002EC818 /* Frameworks */,
 				D3E672BC1897FE79002EC818 /* Products */,
-				38086B998CA400ED756A128B /* Pods */,
+				5ED8964E6A07337D007E25F9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -704,7 +702,7 @@
 				D3D69E1018980E5F006E53FC /* CrashReporter.framework */,
 				D3E672BE1897FE79002EC818 /* Cocoa.framework */,
 				D3E672C01897FE79002EC818 /* Other Frameworks */,
-				FE0F18A7E1824E008211556F /* libPods.a */,
+				3716F494D544D53EEAC796A3 /* libPods-StoryboardMerge.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -749,15 +747,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E672D81897FE7A002EC818 /* Build configuration list for PBXNativeTarget "StoryboardMerge" */;
 			buildPhases = (
-				DA3330AE03D7420EA95A164B /* Check Pods Manifest.lock */,
+				343883D9A59EE140C6A17027 /* [CP] Check Pods Manifest.lock */,
 				D3E672B71897FE79002EC818 /* Sources */,
 				D3E672B81897FE79002EC818 /* Frameworks */,
 				D3E672B91897FE79002EC818 /* Resources */,
-				9D5FF22CDC0B4EEDAD408653 /* Copy Pods Resources */,
 				D3D69E0D18980DBE006E53FC /* CopyFiles */,
 				D3D69E1318980FE4006E53FC /* CopyFiles */,
 				D319A4FB18981C2C0056720C /* CopyFiles */,
-				A4064901E785FE637EDAFE15 /* Embed Pods Frameworks */,
+				A1D8A4A1F7C6C0BD0D358049 /* [CP] Embed Pods Frameworks */,
+				57698A3C8490297F278813AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -831,49 +829,237 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9D5FF22CDC0B4EEDAD408653 /* Copy Pods Resources */ = {
+		343883D9A59EE140C6A17027 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoryboardMerge-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4064901E785FE637EDAFE15 /* Embed Pods Frameworks */ = {
+		57698A3C8490297F278813AD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StoryboardMerge/Pods-StoryboardMerge-resources.sh",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ace.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-beautify.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-chromevox.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-elastic_tabstops_lite.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-emmet.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-error_marker.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-keybinding_menu.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-language_tools.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-linking.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-modelist.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-old_ie.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-searchbox.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-settings_menu.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-spellcheck.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-split.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-static_highlight.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-statusbar.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-textarea.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-themelist.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/ext-whitespace.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/keybinding-emacs.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/keybinding-vim.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-abap.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-actionscript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ada.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-apache_conf.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-applescript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-asciidoc.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-assembly_x86.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-autohotkey.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-batchfile.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-c9search.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-cirru.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-clojure.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-cobol.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-coffee.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-coldfusion.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-csharp.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-css.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-curly.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-c_cpp.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-d.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-dart.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-diff.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-django.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-dockerfile.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-dot.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-eiffel.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ejs.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-elixir.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-elm.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-erlang.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-forth.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ftl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-gcode.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-gherkin.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-gitignore.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-glsl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-golang.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-groovy.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-haml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-handlebars.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-haskell.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-haxe.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-html.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-html_ruby.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ini.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-io.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-jack.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-jade.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-java.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-javascript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-json.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-jsoniq.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-jsp.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-jsx.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-julia.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-latex.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-less.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-liquid.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-lisp.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-livescript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-logiql.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-lsl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-lua.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-luapage.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-lucene.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-makefile.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-markdown.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-mask.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-matlab.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-mel.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-mushcode.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-mysql.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-nix.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-objectivec.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ocaml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-pascal.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-perl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-pgsql.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-php.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-plain_text.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-powershell.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-praat.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-prolog.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-properties.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-protobuf.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-python.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-r.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-rdoc.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-rhtml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-ruby.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-rust.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-sass.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-scad.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-scala.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-scheme.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-scss.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-sh.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-sjs.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-smarty.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-snippets.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-soy_template.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-space.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-sql.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-stylus.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-svg.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-tcl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-tex.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-text.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-textile.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-toml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-twig.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-typescript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-vala.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-vbscript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-velocity.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-verilog.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-vhdl.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-xml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-xquery.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/mode-yaml.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-ambiance.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-chaos.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-chrome.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-clouds.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-clouds_midnight.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-cobalt.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-crimson_editor.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-dawn.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-dreamweaver.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-eclipse.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-github.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-idle_fingers.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-katzenmilch.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-kr_theme.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-kuroir.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-merbivore.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-merbivore_soft.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-monokai.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-mono_industrial.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-pastel_on_dark.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-solarized_dark.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-solarized_light.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-terminal.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-textmate.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-tomorrow.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-tomorrow_night.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-tomorrow_night_blue.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-tomorrow_night_bright.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-tomorrow_night_eighties.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-twilight.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-vibrant_ink.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/theme-xcode.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-coffee.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-css.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-html.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-javascript.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-json.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-lua.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-php.js",
+				"${PODS_ROOT}/ACEView/ACEView/Dependencies/ace/src/worker-xquery.js",
+				"${PODS_ROOT}/ACEView/ACEView/HTML/index.html",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StoryboardMerge/Pods-StoryboardMerge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA3330AE03D7420EA95A164B /* Check Pods Manifest.lock */ = {
+		A1D8A4A1F7C6C0BD0D358049 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StoryboardMerge/Pods-StoryboardMerge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -997,7 +1183,7 @@
 		};
 		D3E672D91897FE7A002EC818 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65DD8423CD48DB3AF1BD6081 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 3361D6341B68AB583F2BE93E /* Pods-StoryboardMerge.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1015,7 +1201,7 @@
 		};
 		D3E672DA1897FE7A002EC818 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AC5DDE86F57E53FB7DE3BBF /* Pods.release.xcconfig */;
+			baseConfigurationReference = 15280880760A12CB62B7E0F4 /* Pods-StoryboardMerge.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
